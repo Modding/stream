@@ -1,0 +1,32 @@
+<?php
+/*
+ * ezweb v0.1 by P. Giebel <spam@stimpyrama.org>
+ *
+ * Config file (see comments for help)
+ */
+ 
+ 
+	$cfg = array(	"basepath"	=> "/path/to/ezweb", // physical base-path of your ezweb web-dir
+
+// SQL-settings
+					"sql"		=> array(	"type"		=> "mysql", // DB-Type (mysql, pgsql, msql, etc.. only mysql is tested!)
+											"host"		=> "localhost", // hostname of your sql-server
+											"user"		=> "ezwebuser", // sql username
+											"pass"		=> "secret", // sql password
+											"db"		=> "ezweb", // sql db name
+											"options"	=> array (	"debug"			=> 2,
+																	"portability"	=> DB_PORTABILITY_ALL
+																	) // sql-options..
+										),
+					"mp3dir"	=> "/path/to/mp3s/", // base-dir of your mp3-collection(s)
+					"scanexts"	=> array( "mp3" ), // which extensions to scan (case-insensitive)
+					"autoqueue"	=> 5, // how many files should always be on queue (will be added automatically and randomly)
+					"dupestep"	=> 10, // check last X played tracks for artist-dupes (so no two tracks by the same artist will be played too fast after another..
+// fallback-track - if something goes wrong, play this track instead of nothing..
+                    "fallback"      => array(       "fid"           => 1, // fileid
+                                                    "filename"      => "/path/to/your/fallbackfile.mp3" // filename incl. path (as wanted by ezstream)
+                                             ),
+                    "lowweightchance"	=> 10 // chance to get played "out of the order" for low weighted tracks
+
+				); 
+?>

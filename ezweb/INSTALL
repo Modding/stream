@@ -1,0 +1,46 @@
+ezWeb v0.1.1 installation instructions
+-----------------------------------------------------------------------------
+
+PREQUISITES
+
+ - ezStream (http://www.icecast.org/ezstream.php)
+ - Apache (http://httpd.apache.org)
+ - PHP (-apache AND -cli) (http://www.php.net)
+ - PEAR::DB
+
+
+INSTALLATION
+
+1. Move all files into a web-accessable directory on your server
+2. Edit config-file (data/include/config.inc.php.sample)
+   and rename it to "config.inc.php"
+3. Now you CAN (and SHOULD) move the files "poll.php" and "dbupdate.php"
+   into another, not web-accessable directory.
+4. Edit "poll.php" and "dbupdate.php": In the very beginning of both
+   files, there's a line looking kind of like that:
+     $webdir = "/path/to/ezweb/";
+   edit it so the path points to your ezweb web-root-dir.
+5. If you can, create a new SQL-DB for ezweb and grant permissions to a 
+   new user (e.g. "ezwebuser") - if you can't, use a SQL-DB and a User
+   you already have..
+6. Create the DB-structure using the SQL-Dumps contained with this
+   archive:
+     #~> mysql -u <username> -p <db-name> < dbinit.sql
+   e.g:
+     #~> mysql -u ezwebuser -p ezweb < dbinit.sql
+7. Visit your new ezWeb-installation with your browser: You'll
+   see a lot of empty windows - click on "add" at the "collection-
+   window" to create your first collection.
+   Collections are different sets of mp3s, so you can easily manage
+   different rotations for different times.
+   The path, you'll be asked for, has to be relative to the "mp3dir"
+   you set at the config-file...
+8. Run "dbupdate.php" via shell: "php dbupdate.php"
+9. Run "poll.php" once via shell: "php poll.php"
+10. Edit your ezstream configuration so it uses the ezweb poller:
+    Somewhere in your ezstream-config, you'll find a line:
+      <filename>foobar</filename>
+    foobar normally is a text-file containing all your mp3s, but it can
+    also be a script:
+      <filename>/path/to/your/poll.php</filename>
+11. (Re)start ezstream

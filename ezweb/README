@@ -1,0 +1,57 @@
+ezWeb v0.1.1 - (C) by P. Giebel <spam@stimpyrama.org>
+-----------------------------------------------------------------------------
+
+
+WHAT IS EZWEB?
+
+ ezWeb is a webinterface for use with ezStream 
+ (http://www.icecast.org/ezstream.php).
+
+
+WHAT CAN IT DO?
+
+ - Add a managable queue to ezStream
+ - Add track weightings
+ - Manage "cron-jobs" (play different collections at different times..)
+
+
+HOW TO USE?
+
+ Just follow the installation instructions at the file "INSTALL" and visit
+ the webinterface with your browser.. It's pretty much self-explanatory.
+ If you don't know what something means, just point on it with your mouse
+ and you'll get a short explanation..
+
+ After adding new tracks to a collection, you'll need to run "dbupdate.php"
+ via shell:
+   #~> php dbupdate.php
+
+
+WHAT'S TO COME?
+
+ Well.. This is no "real" project of mine.. I just needed something like
+ that - it was easy to code - so I did..
+ I still have some Ideas, but we'll see when I'll add them.. ;)
+ So if you want to add features (or even bugfixes..!) - feel free, as long
+ as you don't remove the copyright-tags and send the patches to me..
+
+
+LICENSE?
+
+ BSD...
+
+
+HELP?
+
+ Well.... ;) As I said before: This is no real project of mine.. Of course
+ you can always ask any question you want, but don't expect 24/7 support
+ (or even an own homepage.. ;)
+ You can reach me via email: spam@stimpyrama.org
+ Or via IRC: irc.freenode.net - #eclectix (I'm stimpy...)
+
+
+3RD PARTY SOFTWARE
+
+ ezWeb uses 3rd party software:
+  - getID3 (http://getid3.sourceforge.net/)
+  - PEAR::DB

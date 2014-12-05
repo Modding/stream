@@ -1,0 +1,59 @@
+img {
+	border: 0;
+}
+.defaulttable_head {
+	background-color: #223399;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.defaulttable_text-a {
+	background-color: #E0EFFF;
+}
+.defaulttable_text-b {
+	background-color: #D0E0FF;
+}
+.btn, .btn:visited {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+	border: 1px solid #000000;
+	background-color: #E0EFFF;
+}
+.btn:hover, .btn:visited:hover {
+	text-decoration: none;
+	color: #FF0000;
+	border: 1px solid #444444;
+	background-color: #C0CFFF;
+	cursor: pointer;
+}
+a.smallbtn, a.smallbtn:visited {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+}
+a.smallbtn:hover, a.smallbtn:visited:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+a.help, a.help:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.help, a.help:visited {
+	color: #000000;
+	text-decoration: none;
+	cursor: help;
+}
+input[type=text], select {
+	border: 1px solid #000000;
+	padding: 1px;
+	background-color: #FFFFFF;
+}
+input[type=text]:hover, select:hover, input[type=text]:focus, select:focus {
+	border: 1px solid #000000;
+	padding: 1px;
+	background-color: #BBFFBB;
+}
